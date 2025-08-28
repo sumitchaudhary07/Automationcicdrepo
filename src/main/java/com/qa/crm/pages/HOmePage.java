@@ -16,7 +16,7 @@ public class HOmePage extends BaseTest {
 public HOmePage() {
 		
 		//super(driver);
-		
+		System.out.println("mhgsdjas");
 		PageFactory.initElements(driver, this);
 	}
 	
