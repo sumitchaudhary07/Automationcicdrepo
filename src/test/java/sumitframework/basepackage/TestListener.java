@@ -13,7 +13,7 @@ import com.aventstack.extentreports.Status;
 
 import resource.ExtentReportDemo;
 
-public class TestListener extends Base implements ITestListener {
+public class TestListener extends BaseTest implements ITestListener {
 	ExtentReports er;
 	ExtentTest test;
 	WebDriver driver;
@@ -25,7 +25,7 @@ public class TestListener extends Base implements ITestListener {
 		// TODO Auto-generated method stub
 		
 		 er=ExtentReportDemo.reportGeneration();
-		 er.createTest(result.getMethod().getMethodName());
+		test= er.createTest(result.getMethod().getMethodName());
 		 
 		
 	}
@@ -35,6 +35,20 @@ public class TestListener extends Base implements ITestListener {
 		// TODO Auto-generated method stub
 		
 		test.log(Status.PASS, "Test is passes");
+		 
+		 String path=null;
+		 try {
+			 path=takeScreenshot(result.getMethod().getMethodName(),driver);
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	
+	test.addScreenCaptureFromPath(path, result.getMethod().getMethodName());
+		 
 	}
 
 	@Override

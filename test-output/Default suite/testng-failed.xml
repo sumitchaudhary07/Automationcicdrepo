@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sumitframework.Standalone2">
+      <class name="com.qa.crm.test.LoginPageTest">
         <methods>
-          <include name="driveTest" invocation-numbers="1"/>
+          <include name="setUp"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- sumitframework.Standalone2 -->
+      </class> <!-- com.qa.crm.test.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

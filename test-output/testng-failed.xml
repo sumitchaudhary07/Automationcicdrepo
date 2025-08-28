@@ -3,11 +3,19 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="sumitframework.StandaloneTest">
+      <class name="com.qa.crm.test.HOmePageTest">
         <methods>
-          <include name="driveTest" invocation-numbers="1"/>
+          <include name="getHomePage"/>
+          <include name="toaster"/>
+          <include name="getProduct"/>
         </methods>
-      </class> <!-- sumitframework.StandaloneTest -->
+      </class> <!-- com.qa.crm.test.HOmePageTest -->
+      <class name="com.qa.crm.test.LoginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.qa.crm.test.LoginPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

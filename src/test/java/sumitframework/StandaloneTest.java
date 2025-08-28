@@ -8,12 +8,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import sumitframework.basepackage.Base;
+import com.sun.net.httpserver.Authenticator.Retry;
 
+import sumitframework.basepackage.Base;
 import sumitframework.pageobjectmodel.LandingPage;
 import sumitframework.pageobjectmodel.ProductList;
 
@@ -22,8 +22,9 @@ public class StandaloneTest  extends Base{
 
 	
 	
-	
-@Test(dataProvider = "getData")
+
+@Test(dataProvider = "getData" , retryAnalyzer = sumitframework.basepackage.Retry.class)
+
 	public void driveTest(HashMap<String,String> input) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 	

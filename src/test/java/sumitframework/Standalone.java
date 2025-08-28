@@ -41,7 +41,7 @@ for(int i=0;i<numberofProduct;i++)
 {
 	String productname=productList.get(i).getText();
 	System.out.println(productname);
-	if(productname.contains("ZARA COAT 3"))
+	if(productname.contains("ADIDAS"))
 	{
 		
 	WebElement addToCart=	productList.get(i).findElement(By.cssSelector(".btn.w-10.rounded"));

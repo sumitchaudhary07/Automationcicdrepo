@@ -15,6 +15,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -29,14 +30,21 @@ public class Base {
 	public WebDriver initiateDriver() throws IOException
 	{
 		
-		
-		FileInputStream fis=new FileInputStream("\\seleniumframework\\src\\test\\java\\resource\\Global.properties");
+			FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\resource\\Global.properties");
 		 Properties p=new Properties();
 		 p.load(fis);
+	String browserName=	 System.getProperty("browser")!=null?System.getProperty("browser"):p.getProperty("browser");
+	
 		System.out.println(p.getProperty("browser")); 
 		 
-		 
+		 if(browserName.equalsIgnoreCase("chrome"))
+		 {
 	 driver =new ChromeDriver();
+		 }
+		 else if(browserName.equalsIgnoreCase("edge"))
+		 {
+			 driver =new EdgeDriver();
+		 }
 	
 	 
 	return driver;

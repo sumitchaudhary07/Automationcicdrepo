@@ -1,3 +1,13 @@
+com\qa\crm\testdata\TestDataHashMap$1.class
 sumitframework\pageobjectmodel\LandingPage.class
 sumitframework\pageobjectmodel\ResuableAbstractComponent.class
+sumitframework\pageobjects\ProductCatalogue.class
+com\qa\crm\pages\Login.class
 sumitframework\pageobjectmodel\ProductList.class
+com\qa\crm\base\BaseTest.class
+com\qa\crm\pages\HOmePage.class
+sumitframewor\abstractcomponent\AbstractComponent.class
+com\qa\crm\utilities\TestUtils.class
+com\qa\crm\testdata\TestDataHashMap.class
+sumitframework\pageobjects\Landing.class
+com\qa\crm\utilities\WebDriverEvent.class

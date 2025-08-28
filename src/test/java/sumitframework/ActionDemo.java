@@ -17,7 +17,7 @@ public class ActionDemo {
       WebDriver driver= new ChromeDriver();
       
       Actions a=new Actions(driver);
-      
+      a.do
       driver.get("https://www.amazon.com/");
       Thread.sleep(20000);
       driver.manage().window().maximize();
